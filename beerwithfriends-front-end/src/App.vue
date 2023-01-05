@@ -1,12 +1,22 @@
-<template>
+npm <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/create">Create</router-link>
-    </nav>
-    <router-view/>
+      <Nav />
+      <div class="component-view">
+          <router-view />
+      </div>
+      
   </div>
 </template>
+
+<script>
+    import Nav from './components/Nav.vue';
+  export default {
+    name: 'app',
+    components: {
+        Nav,
+    },
+  };
+</script>
 
 <style>
 #app {

@@ -57,7 +57,7 @@
               console.warn(this.form)
               axios({
                   method: 'post',
-                  url: 'https://localhost:7168/api/beers/Create',
+                  url: 'https://localhost:7168/api/beers/newbeer',
                   data: {
                       "name": this.form.name,
                       "description": this.form.description,

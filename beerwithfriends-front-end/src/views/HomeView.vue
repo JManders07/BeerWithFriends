@@ -14,8 +14,8 @@
 
 <script>
 import axios from 'axios'
-    import VueAxios from 'vue-axios'
-    import Vue from 'vue'
+import VueAxios from 'vue-axios'
+import Vue from 'vue'
 
     Vue.use(VueAxios, axios)
 
@@ -31,7 +31,7 @@ export default {
   },
   mounted(){
     axios
-      .get('https://localhost:7168/api/beers/allbeers')
+      .get('https://localhost:7064/api/beer/beers')
       .then(response=> {
         this.beerList = response.data
         console.warn(this.beerList)

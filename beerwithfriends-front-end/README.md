@@ -1,4 +1,4 @@
-# prototype-frontend
+# beerwithfriends-front-end
 
 ## Project setup
 ```
