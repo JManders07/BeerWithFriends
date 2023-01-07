@@ -6,10 +6,10 @@
             <span class="w3-tag w3-wide">ABOUT BEER WITH FRIENDS</span>
           </h4>
           <p>
-            <!-- {{ beer.name }}
+            {{ beer.name }}
             {{ beer.description }}
             {{ beer.alcoholpercentage }}
-            {{ beer.id }} -->
+            {{ beer.id }}
             
           </p>
         </div>
@@ -25,16 +25,20 @@ import Vue from "vue";
 Vue.use(VueAxios, axios);
 
 export default {
+    
   name: "BeerView",
   components: {},
   data() {
     return {
       beer : null,
+      beerid : null,
     };
   },
   mounted() {
+    
+    this.beerid = this.$route.params.id;
     axios
-    .get('https://localhost:7064/api/Beer/Beer/' + this.route.params.id).then((response) => {
+    .get('https://localhost:7064/api/Beer/Beer/' + this.beerid).then((response) => {
       this.beer = response.data;
       console.warn(this.beer);
     });
