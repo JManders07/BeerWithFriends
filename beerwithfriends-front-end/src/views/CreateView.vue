@@ -6,19 +6,19 @@
       </div>
       <div>
           
-          <div>
+          <div class="create">
               <h4>Beer:</h4>
-              <b-form-textarea
+              <b-form-textarea class="form"
                                v-model="form.name"
                                placeholder="Fill in the name here">
               </b-form-textarea>
-              <b-form-textarea
+              <b-form-textarea class="form"
                                v-model="form.description"
                                placeholder="Fill in the description here"
                                rows="3"
                                max-rows="5">
               </b-form-textarea>
-              <b-form-textarea
+              <b-form-textarea class="form"
                                v-model="form.alcoholpercentage"
                                placeholder="Fill in the alcoholpercentage here"
                                rows="3"
@@ -57,7 +57,7 @@
               console.warn(this.form)
               axios({
                   method: 'post',
-                  url: 'https://localhost:7168/api/beers/newbeer',
+                  url: 'https://localhost:7064/api/beer',
                   data: {
                       "name": this.form.name,
                       "description": this.form.description,
@@ -70,12 +70,13 @@
 </script>
 
 <style scoped>
-  .rate{
+  .create{
       margin-left: 50px;
       margin-bottom: 25px;
+      margin-right: 50px;
   }
 
-  .rate-comment{
+  .form{
       margin-top: 25px;
       margin-bottom: 25px;
   }

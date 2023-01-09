@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <b-card-group style="margin: 80px">
+    <b-card-group style="margin: 80px;">
       <b-card
         v-for="beer in beerList"
         :key="beer.amount"
@@ -17,6 +17,7 @@
           {{ beer.description }}
         </b-card-text>
         <b-button variant="warning"><router-link :to="'/beer/' + `${beer.id}`">More info</router-link></b-button>
+        <b-button variant="warning"><router-link :to="'/review/' + `${beer.id}`">Give review</router-link></b-button>
       </b-card>
     </b-card-group>
   </div>
@@ -43,5 +44,6 @@ export default {
       console.warn(this.beerList);
     });
   },
-};
+  
+}
 </script>
