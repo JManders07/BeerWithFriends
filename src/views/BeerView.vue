@@ -3,7 +3,7 @@
       <div class="w3-container" id="about">
         <div class="w3-content" style="max-width:1200px, position: relative;">
           <h4 class="w3-center w3-padding-64">
-            <span class="w3-tag w3-wide">About {{ beer.name }} </span>
+            <span class="beername">About {{ beer.name }} </span>
           </h4>
           <p>
             {{ beer.name }} has a alcoholpercentage of {{ beer.alcoholPercentage }}%

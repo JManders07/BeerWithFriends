@@ -1,0 +1,15 @@
+describe('template spec', () => {
+  it('Goes to the beerpage and finds a beer with the name Jupiler', () => {
+    cy.visit('/')
+    cy.contains('New Beer').click()
+    cy.get('#__BVID__19').type('Cypress')
+    cy.get('#__BVID__20').type('Cypress is very good at testing')
+    cy.get('#__BVID__21').type('5')
+    cy.contains('Submit').click()
+    cy.contains('Beers').click()
+    cy.get(':nth-child(2) > .card-body > :nth-child(3) > a').click()
+    cy.contains('Cypress')
+    cy.contains('Delete').click()
+    cy.reload()
+  })
+})
