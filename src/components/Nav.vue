@@ -35,7 +35,7 @@
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto right-side">
             <b-navbar-nav>
-              <div v-if="$auth.loading">
+              <div v-if="!$auth.loading">
                 <!-- show login when not authenticated -->
                 <b-button v-if="!$auth.isAuthenticated" variant="secondary"
                   ><a @click="login"><strong>Sign in</strong></a></b-button

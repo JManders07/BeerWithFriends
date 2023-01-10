@@ -16,7 +16,7 @@
         <b-card-text>
           {{ beer.description }}
         </b-card-text>
-        <b-button variant="warning"><router-link :to="'/beer/' + `${beer.id}`">More info</router-link></b-button>
+        <b-button variant="warning" name="info"><router-link :to="'/beer/' + `${beer.id}`">More info</router-link></b-button>
         <b-button variant="warning"><router-link :to="'/review/' + `${beer.id}`">Give review</router-link></b-button>
       </b-card>
     </b-card-group>

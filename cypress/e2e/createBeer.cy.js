@@ -19,7 +19,9 @@ describe('template spec', () => {
     // eslint-disable-next-line no-undef
     cy.contains('Beers').click()
     // eslint-disable-next-line no-undef
-    cy.get(':nth-child(2) > .card-body > :nth-child(3) > a').click()
+    cy.contains('.card-title', 'Cypress').parent('div').within(() => {
+      cy.get('button[name=info]').click()
+    })
     // eslint-disable-next-line no-undef
     cy.contains('Cypress')
     // eslint-disable-next-line no-undef
