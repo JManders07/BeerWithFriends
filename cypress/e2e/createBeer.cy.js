@@ -3,8 +3,6 @@ describe('template spec', () => {
   // eslint-disable-next-line no-undef
   it('Goes to the beerpage and finds a beer with the name Jupiler', () => {
     // eslint-disable-next-line no-undef
-    cy.once('uncaught:exception', () => false);
-    // eslint-disable-next-line no-undef
     cy.visit('/')
     // eslint-disable-next-line no-undef
     cy.contains('New Beer').click()
